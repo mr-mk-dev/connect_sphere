@@ -1,0 +1,1 @@
+INSERT INTO temp values(1,'Manisha')

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ConnectSphere
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 8082
