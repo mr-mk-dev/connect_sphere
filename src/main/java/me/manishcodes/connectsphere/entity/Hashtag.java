@@ -1,4 +1,4 @@
-package in.manishcodes.connectsphere.entity;
+package me.manishcodes.connectsphere.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,26 +8,22 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "likes", uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"post_id", "user_id"})
-})
+@Table(name = "hashtags")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Like {
+public class Hashtag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "like_id")
-    private Long likeId;
+    @Column(name = "hashtag_id")
+    private Long hashtagId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id", nullable = false)
-    private Post post;
+    @Column(name = "name", nullable = false, unique = true, length = 100)
+    private String name;  // lowercase, no # prefix (e.g., "springboot")
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private Users user;
+    @Column(name = "post_count", nullable = false)
+    private long postCount = 0;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;

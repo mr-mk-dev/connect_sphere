@@ -1,4 +1,4 @@
-package in.manishcodes.connectsphere.enums;
+package me.manishcodes.connectsphere.enums;
 
 public enum ReportTargetType {
     POST,

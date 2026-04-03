@@ -1,7 +1,7 @@
-package in.manishcodes.connectsphere.entity;
+package me.manishcodes.connectsphere.entity;
 
-import in.manishcodes.connectsphere.enums.AccountStatus;
-import in.manishcodes.connectsphere.enums.UserRole;
+import me.manishcodes.connectsphere.enums.AccountStatus;
+import me.manishcodes.connectsphere.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

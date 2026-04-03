@@ -1,8 +1,7 @@
-package in.manishcodes.connectsphere.entity;
+package me.manishcodes.connectsphere.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.repository.cdi.Eager;
 
 import java.time.LocalDateTime;
 

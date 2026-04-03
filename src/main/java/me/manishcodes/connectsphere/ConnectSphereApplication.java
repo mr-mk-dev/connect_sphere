@@ -1,4 +1,4 @@
-package in.manishcodes.connectsphere;
+package me.manishcodes.connectsphere;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

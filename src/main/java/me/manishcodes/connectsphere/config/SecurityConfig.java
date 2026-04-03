@@ -1,4 +1,4 @@
-package in.manishcodes.connectsphere.config;
+package me.manishcodes.connectsphere.config;
 
 import org.springframework.context.annotation.Configuration;
 

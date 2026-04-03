@@ -1,4 +1,4 @@
-package in.manishcodes.connectsphere.entity;
+package me.manishcodes.connectsphere.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,28 +8,32 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "comments")
+@Table(name = "posts")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class Comment {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "comment_id")
-    private Long commentId;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id", nullable = false)
-    private Post post;    // which post this comment is on
+    @Column(name = "post_id")
+    private Long postId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    private Users user;   // who wrote this comment
+    private Users user;
 
-    @Column(name = "content", nullable = false, length = 300)
+    @Column(name = "content", nullable = false, length = 500)
     private String content;
+
+    @Column(name = "img_url", length = 500)
+    private String imgUrl;
+
+    @Column(name = "like_count", nullable = false)
+    private long likeCount = 0;
+
+    @Column(name = "comment_count", nullable = false)
+    private long commentCount = 0;
 
     @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted = false;
@@ -41,7 +45,7 @@ public class Comment {
     private LocalDateTime updatedAt;
 
     @Column(name = "deleted_at")
-    private LocalDateTime deletedAt;  // set when soft-deleted
+    private LocalDateTime deletedAt;
 
     @PrePersist
     protected void onCreate() {

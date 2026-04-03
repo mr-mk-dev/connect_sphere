@@ -1,4 +1,4 @@
-package in.manishcodes.connectsphere.entity;
+package me.manishcodes.connectsphere.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
