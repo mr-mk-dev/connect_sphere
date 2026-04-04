@@ -1,8 +1,8 @@
 -- =====================================================
 -- ConnectSphere — Dummy Data for Testing
 -- =====================================================
--- Password for ALL users: Password123!
--- Bcrypt hash: $2a$10$dXJ3SW6G7P50lGEMo8gIvOQVge64lgNmzaWM5mW1ZBlmY8jhYOa6u
+-- Password for ALL users: 123456
+-- Bcrypt hash: $2a$10$atE.TpXs/cCfIz2q/e7IUeP6S5bp6ev9pEeYx8QsqcO0eUERUFORe
 -- =====================================================
 
 -- ─────────────────────────────────────────────────────
@@ -10,15 +10,15 @@
 -- ─────────────────────────────────────────────────────
 INSERT INTO users (email, user_name, password, full_name, bio, profile_pic, location, website, role, status, post_count, follower_count, following_count, email_verified, created_at, updated_at)
 VALUES
-    ('admin@connectsphere.com', 'admin_manish', '$2a$10$dXJ3SW6G7P50lGEMo8gIvOQVge64lgNmzaWM5mW1ZBlmY8jhYOa6u', 'Manish Kumar', 'Platform Admin | Full-Stack Developer', 'https://i.pravatar.cc/150?u=admin', 'Bangalore, India', 'https://manish.dev', 'ADMIN', 'ACTIVE', 3, 4, 2, true, '2026-01-01 10:00:00', '2026-04-01 10:00:00'),
+    ('admin@connectsphere.com', 'admin_manish', '$2a$10$atE.TpXs/cCfIz2q/e7IUeP6S5bp6ev9pEeYx8QsqcO0eUERUFORe', 'Manish Kumar', 'Platform Admin | Full-Stack Developer', 'https://i.pravatar.cc/150?u=admin', 'Bangalore, India', 'https://manish.dev', 'ADMIN', 'ACTIVE', 3, 4, 2, true, '2026-01-01 10:00:00', '2026-04-01 10:00:00'),
 
-    ('mod@connectsphere.com', 'mod_priya', '$2a$10$dXJ3SW6G7P50lGEMo8gIvOQVge64lgNmzaWM5mW1ZBlmY8jhYOa6u', 'Priya Sharma', 'Content Moderator | Keeping it clean 🛡️', 'https://i.pravatar.cc/150?u=priya', 'Mumbai, India', NULL, 'MODERATOR', 'ACTIVE', 2, 3, 3, true, '2026-01-05 12:00:00', '2026-03-28 15:00:00'),
+    ('mod@connectsphere.com', 'mod_priya', '$2a$10$atE.TpXs/cCfIz2q/e7IUeP6S5bp6ev9pEeYx8QsqcO0eUERUFORe', 'Priya Sharma', 'Content Moderator | Keeping it clean 🛡️', 'https://i.pravatar.cc/150?u=priya', 'Mumbai, India', NULL, 'MODERATOR', 'ACTIVE', 2, 3, 3, true, '2026-01-05 12:00:00', '2026-03-28 15:00:00'),
 
-    ('john@example.com', 'john_doe', '$2a$10$dXJ3SW6G7P50lGEMo8gIvOQVge64lgNmzaWM5mW1ZBlmY8jhYOa6u', 'John Doe', 'Backend dev | Kafka enthusiast ☕', 'https://i.pravatar.cc/150?u=john', 'Delhi, India', 'https://johndoe.dev', 'USER', 'ACTIVE', 3, 3, 3, true, '2026-01-10 09:00:00', '2026-04-02 18:00:00'),
+    ('john@example.com', 'john_doe', '$2a$10$atE.TpXs/cCfIz2q/e7IUeP6S5bp6ev9pEeYx8QsqcO0eUERUFORe', 'John Doe', 'Backend dev | Kafka enthusiast ☕', 'https://i.pravatar.cc/150?u=john', 'Delhi, India', 'https://johndoe.dev', 'USER', 'ACTIVE', 3, 3, 3, true, '2026-01-10 09:00:00', '2026-04-02 18:00:00'),
 
-    ('jane@example.com', 'jane_dev', '$2a$10$dXJ3SW6G7P50lGEMo8gIvOQVge64lgNmzaWM5mW1ZBlmY8jhYOa6u', 'Jane Smith', 'Full-stack dev | React + Spring Boot 🚀', 'https://i.pravatar.cc/150?u=jane', 'Pune, India', NULL, 'USER', 'ACTIVE', 2, 2, 3, true, '2026-02-01 14:00:00', '2026-04-01 20:00:00'),
+    ('jane@example.com', 'jane_dev', '$2a$10$atE.TpXs/cCfIz2q/e7IUeP6S5bp6ev9pEeYx8QsqcO0eUERUFORe', 'Jane Smith', 'Full-stack dev | React + Spring Boot 🚀', 'https://i.pravatar.cc/150?u=jane', 'Pune, India', NULL, 'USER', 'ACTIVE', 2, 2, 3, true, '2026-02-01 14:00:00', '2026-04-01 20:00:00'),
 
-    ('alex@example.com', 'alex_codes', '$2a$10$dXJ3SW6G7P50lGEMo8gIvOQVge64lgNmzaWM5mW1ZBlmY8jhYOa6u', 'Alex Rivera', 'DevOps | Docker | Jenkins 🐳', 'https://i.pravatar.cc/150?u=alex', 'Hyderabad, India', 'https://alexcodes.io', 'USER', 'ACTIVE', 2, 2, 3, true, '2026-02-15 11:00:00', '2026-03-30 09:00:00');
+    ('alex@example.com', 'alex_codes', '$2a$10$atE.TpXs/cCfIz2q/e7IUeP6S5bp6ev9pEeYx8QsqcO0eUERUFORe', 'Alex Rivera', 'DevOps | Docker | Jenkins 🐳', 'https://i.pravatar.cc/150?u=alex', 'Hyderabad, India', 'https://alexcodes.io', 'USER', 'ACTIVE', 2, 2, 3, true, '2026-02-15 11:00:00', '2026-03-30 09:00:00');
 
 
 -- ─────────────────────────────────────────────────────
