@@ -21,7 +21,7 @@ public class NotificationPreference {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false, unique = true)
-    private Users user;  // one preference row per user
+    private User user;  // one preference row per user
 
     @Column(name = "like_notification", nullable = false)
     private boolean likeNotification = true;

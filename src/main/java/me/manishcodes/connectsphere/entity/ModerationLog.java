@@ -22,7 +22,7 @@ public class ModerationLog {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "moderator_id", nullable = false)
-    private Users moderator;  // who took the action (moderator/admin)
+    private User moderator;  // who took the action (moderator/admin)
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "report_id")
@@ -37,7 +37,7 @@ public class ModerationLog {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "target_user_id")
-    private Users targetUser;  // the user affected (warned/banned)
+    private User targetUser;  // the user affected (warned/banned)
 
     @Column(name = "target_type", length = 20)
     private String targetType;  // POST, COMMENT, USER

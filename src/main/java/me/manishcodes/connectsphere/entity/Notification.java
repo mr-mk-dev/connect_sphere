@@ -22,11 +22,11 @@ public class Notification {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    private Users user;  // who receives the notification
+    private User user;  // who receives the notification
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "actor_id")
-    private Users actor;  // who triggered it (null for system notifications)
+    private User actor;  // who triggered it (null for system notifications)
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false, length = 30)

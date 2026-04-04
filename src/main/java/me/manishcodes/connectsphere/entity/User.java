@@ -1,5 +1,6 @@
 package me.manishcodes.connectsphere.entity;
 
+import lombok.Builder;
 import me.manishcodes.connectsphere.enums.AccountStatus;
 import me.manishcodes.connectsphere.enums.UserRole;
 import jakarta.persistence.*;
@@ -22,7 +23,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Users implements UserDetails {
+@Builder
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -98,5 +100,25 @@ public class Users implements UserDetails {
     @Override
     public String getUsername() {
         return userName;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return this.status == AccountStatus.ACTIVE;
     }
 }

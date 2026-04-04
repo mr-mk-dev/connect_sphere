@@ -21,11 +21,11 @@ public class Conversation {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user1_id", nullable = false)
-    private Users user1;
+    private User user1;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user2_id", nullable = false)
-    private Users user2;
+    private User user2;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "last_message_id")

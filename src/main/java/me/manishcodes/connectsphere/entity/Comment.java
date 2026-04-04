@@ -26,7 +26,7 @@ public class Comment {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    private Users user;   // who wrote this comment
+    private User user;   // who wrote this comment
 
     @Column(name = "content", nullable = false, length = 300)
     private String content;
