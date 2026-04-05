@@ -37,7 +37,7 @@ public class User implements UserDetails {
     @Column(name = "user_name", nullable = false, unique = true, length = 20)
     private String userName;
 
-    @Column(name = "password", nullable = false, length = 255)
+    @Column(name = "password", nullable = true, length = 255)
     private String password;
 
     @Column(name = "full_name", nullable = false, length = 50)
@@ -57,23 +57,23 @@ public class User implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false, length = 20)
-    private UserRole role = UserRole.USER;
+    private UserRole role;
 
     @Column(name = "status", nullable = false, length = 20)
     @Enumerated(EnumType.STRING)
-    private AccountStatus status = AccountStatus.ACTIVE;
+    private AccountStatus status;
 
     @Column(name = "post_count", nullable = false)
-    private long postCount = 0;
+    private long postCount;
 
     @Column(name = "follower_count", nullable = false)
-    private long followerCount = 0;
+    private long followerCount;
 
     @Column(name = "following_count", nullable = false)
-    private long followingCount = 0;
+    private long followingCount;
 
     @Column(name = "email_verified", nullable = false)
-    private boolean emailVerified = false;
+    private boolean emailVerified;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
