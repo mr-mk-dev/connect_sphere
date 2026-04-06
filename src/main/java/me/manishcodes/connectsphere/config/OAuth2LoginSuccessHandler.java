@@ -13,8 +13,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import me.manishcodes.connectsphere.entity.User;
-import me.manishcodes.connectsphere.enums.AccountStatus;
-import me.manishcodes.connectsphere.enums.UserRole;
 import me.manishcodes.connectsphere.repository.UserRepo;
 
 @Component
@@ -27,8 +25,8 @@ public class OAuth2LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHan
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
-                                        HttpServletResponse response,
-                                        Authentication authentication) throws IOException {
+            HttpServletResponse response,
+            Authentication authentication) throws IOException {
 
         OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
 
@@ -58,7 +56,7 @@ public class OAuth2LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHan
                     .emailVerified(true)
                     .build();
 
-            User savedUser = saveUser(newUser); 
+            User savedUser = saveUser(newUser);
 
             tokenToFrontend = authUtil.getToken(savedUser);
         }

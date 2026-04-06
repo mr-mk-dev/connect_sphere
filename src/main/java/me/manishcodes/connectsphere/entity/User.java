@@ -72,8 +72,9 @@ public class User implements UserDetails {
     @Column(name = "following_count", nullable = false)
     private long followingCount;
 
+    @Builder.Default
     @Column(name = "email_verified", nullable = false)
-    private boolean emailVerified=false;
+    private boolean emailVerified = false;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -87,7 +88,7 @@ public class User implements UserDetails {
         status = AccountStatus.ACTIVE;
         postCount = 0;
         followerCount = 0;
-        followingCount = 0 ;
+        followingCount = 0;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
