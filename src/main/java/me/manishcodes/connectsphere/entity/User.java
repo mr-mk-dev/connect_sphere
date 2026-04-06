@@ -73,7 +73,7 @@ public class User implements UserDetails {
     private long followingCount;
 
     @Column(name = "email_verified", nullable = false)
-    private boolean emailVerified;
+    private boolean emailVerified=false;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -83,6 +83,11 @@ public class User implements UserDetails {
 
     @PrePersist
     protected void onCreate() {
+        role = UserRole.USER;
+        status = AccountStatus.ACTIVE;
+        postCount = 0;
+        followerCount = 0;
+        followingCount = 0 ;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
